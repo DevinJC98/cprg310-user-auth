@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RegistrationPage() {
   return (
     <>
@@ -9,6 +11,10 @@ export default function RegistrationPage() {
         <input name="pw" type="password"></input>
         <button type="submit">Create Account</button>
       </form>
+      <label htmlFor="loginButton">Already have an account?</label>
+      <Link href="/pages/login">
+        <button id="loginButton"> Log In</button>
+      </Link>
     </>
   );
 }

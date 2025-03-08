@@ -18,7 +18,7 @@ export async function Post(request) {
   try {
     await client.request(registerUser(email, password));
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    url.pathname = "/pages/dashboard";
     return NextResponse.redirect(url);
   } catch {
     return NextResponse.json({ error: "Registration failed" }, { status: 500 });
