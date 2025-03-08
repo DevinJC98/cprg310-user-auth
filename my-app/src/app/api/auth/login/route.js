@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
 export async function POST(request) {
-  const formData = await request.formDate();
+  const formData = await request.formData();
 
   const email = formData.get("email");
   const password = formData.get("password");
@@ -23,8 +23,8 @@ export async function POST(request) {
         secure: true,
       });
     }
-    const url = request.nextURL.clone();
-    url.pathname = "/dashboard";
+    const url = request.nextUrl.clone();
+    url.pathname = "/pages/dashboard";
     return NextResponse.redirect(url);
   } catch (error) {
     return NextResponse.json(

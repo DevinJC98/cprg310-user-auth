@@ -5,10 +5,10 @@ export default function RegistrationPage() {
     <>
       <h1> Create Account </h1>
       <form action="/api/auth/register" method="POST">
-        <label htmlFor="em">Email Address</label>
-        <input name="em" type="email"></input>
-        <label htmlFor="pw">Password</label>
-        <input name="pw" type="password"></input>
+        <label htmlFor="email">Email Address</label>
+        <input name="email" type="email"></input>
+        <label htmlFor="password">Password</label>
+        <input name="password" type="password"></input>
         <button type="submit">Create Account</button>
       </form>
       <label htmlFor="loginButton">Already have an account?</label>

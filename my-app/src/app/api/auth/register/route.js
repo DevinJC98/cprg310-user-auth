@@ -2,7 +2,7 @@ import client from "../../../../../lib/directus";
 import { registerUser } from "@directus/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function Post(request) {
+export async function POST(request) {
   const formData = await request.formData();
 
   const email = formData.get("email");
