@@ -1,6 +1,7 @@
 import { getUserData } from "../../../../lib/dal";
 import client from "../../../../lib/directus";
 import { readItems } from "@directus/sdk";
+import "./dashboard.css";
 
 export default async function Dashboard() {
   const response = await getUserData();
@@ -9,7 +10,7 @@ export default async function Dashboard() {
 
   return (
     <main>
-      <h1>Hello {response?.user?.first_name}</h1>
+      <h1>Hello {response?.user?.email}</h1>
       <form action="/api/auth/logout" method="POST">
         <button type="submit"> Log Out </button>
       </form>
