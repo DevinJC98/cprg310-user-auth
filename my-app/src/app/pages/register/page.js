@@ -1,28 +1,62 @@
-import { register } from "module";
 import Link from "next/link";
 import "./register.css";
 
 export default function RegistrationPage() {
   return (
-    <>
-      <h1> Create Account </h1>
-      <form action="/api/auth/register" method="POST">
-        <label htmlFor="email">Email Address</label>
-        <input name="email" type="email"></input>
-        <label htmlFor="password">Password</label>
-        <input name="password" type="password"></input>
+    <div className="register-container">
+      <div className="register-section">
+        <h1 className="register-title">Create Account</h1>
+        <form
+          action="/api/auth/register"
+          method="POST"
+          className="register-form"
+        >
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email Address
+            </label>
+            <input name="email" type="email" className="form-input"></input>
+          </div>
 
-        <label htmlFor="fname">Email Address</label>
-        <input name="fnam" type="text"></input>
-        <label htmlFor="lname">Password</label>
-        <input name="lname" type="text"></input>
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              name="password"
+              type="password"
+              className="form-input"
+            ></input>
+          </div>
 
-        <button type="submit">Create Account</button>
-      </form>
-      <label htmlFor="loginButton">Already have an account?</label>
-      <Link href="/pages/login">
-        <button id="loginButton"> Log In</button>
-      </Link>
-    </>
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="fname" className="form-label">
+                First Name
+              </label>
+              <input name="fname" type="text" className="form-input"></input>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="lname" className="form-label">
+                Last Name
+              </label>
+              <input name="lname" type="text" className="form-input"></input>
+            </div>
+          </div>
+
+          <button type="submit" className="signup-btn">
+            Create Account
+          </button>
+        </form>
+      </div>
+
+      <div className="login-section">
+        <p className="login-text">Already have an account?</p>
+        <Link href="/pages/login">
+          <button className="login-btn">Log In</button>
+        </Link>
+      </div>
+    </div>
   );
 }

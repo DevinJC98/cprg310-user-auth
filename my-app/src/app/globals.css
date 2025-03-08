@@ -1,2 +1,57 @@
 :root {
+  --teal: #008899;
+}
+
+body {
+  background-image: url("/bg_pet.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.login_btn {
+  background-color: var(--teal);
+  color: white;
+  border: 2px solid var(--teal);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signup_btn {
+  background-color: transparent;
+  color: black;
+  border: 2px solid var(--teal);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login_btn:hover {
+  background-color: transparent;
+  color: black;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.signup_btn:hover {
+  background-color: var(--teal);
+  color: white;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+}
+.welcome_text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  color: #555;
 }

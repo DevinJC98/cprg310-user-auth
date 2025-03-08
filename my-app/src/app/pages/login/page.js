@@ -1,20 +1,42 @@
 import Link from "next/link";
+import "./login.css";
 
 export default function LoginPage() {
   return (
-    <>
-      <h1> Log In </h1>
-      <form action="/api/auth/login" method="POST">
-        <label htmlFor="email">Email Address</label>
-        <input name="email" type="email"></input>
-        <label htmlFor="password">Password</label>
-        <input name="password" type="password"></input>
-        <button type="submit">Log In</button>
-        <label htmlFor="registerButton">Don't have an account?</label>
+    <div className="login-container">
+      <div className="login-section">
+        <h1 className="login-title">Log In</h1>
+        <form action="/api/auth/login" method="POST" className="login-form">
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email Address
+            </label>
+            <input name="email" type="email" className="form-input"></input>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              name="password"
+              type="password"
+              className="form-input"
+            ></input>
+          </div>
+
+          <button type="submit" className="login-btn">
+            Log In
+          </button>
+        </form>
+      </div>
+
+      <div className="register-section">
+        <p className="register-text">Don't have an account?</p>
         <Link href="/pages/register">
-          <button id="registerButton"> Register</button>
+          <button className="signup-btn">Register</button>
         </Link>
-      </form>
-    </>
+      </div>
+    </div>
   );
 }
