@@ -6,9 +6,11 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request) {
   //this line checks all the data from the form
   const formData = await request.formData();
-  //these two lines specify what data we want
+  //these lines specify what data we want and puts them into a variable for easy access
   const email = formData.get("email");
   const password = formData.get("password");
+  const fname = formData.get("fname");
+  const lname = formData.get("lname");
 
   //if theres no email or no password send an error
   if (!email || !password) {
@@ -20,9 +22,13 @@ export async function POST(request) {
 
   //this block tries to register the user submitted data into directus then redirect the user to the login page
   try {
-    await client.request(registerUser(email, password));
+    await client.request(
+      //this function is from directus and will build a user passing the email and password as required fields. the {} after them is options for the function that fill aditional fields.
+      registerUser(email, password, { first_name: fname, last_name: lname })
+    );
+    //sends the user to login once account created
     const url = request.nextUrl.clone();
-    url.pathname = "/pages/dashboard";
+    url.pathname = "/pages/login";
     return NextResponse.redirect(url);
   } catch {
     //if the registration fails, send an error message

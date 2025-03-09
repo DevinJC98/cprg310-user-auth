@@ -77,3 +77,5 @@ Run Command "npm install @directus/sdk to install dependancies
 ## App Creation
 
 Primary Tutorial -https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js
+
+Helpful documentation - https://docs.directus.io/packages/@directus/sdk/rest/functions/registerUser.html

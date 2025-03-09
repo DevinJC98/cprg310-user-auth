@@ -13,7 +13,6 @@ export default async function Dashboard() {
 
   return (
     <main>
-      <button onClick={console.log(userdata)}>console.log</button>
       <h1>Hello {userdata.first_name + " " + userdata.last_name}</h1>
       <form action="/api/auth/logout" method="POST">
         <button type="submit"> Log Out </button>

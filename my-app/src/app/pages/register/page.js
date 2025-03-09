@@ -11,6 +11,22 @@ export default function RegistrationPage() {
           method="POST"
           className="register-form"
         >
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="fname" className="form-label">
+                First Name
+              </label>
+              <input name="fname" type="string" className="form-input"></input>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="lname" className="form-label">
+                Last Name
+              </label>
+              <input name="lname" type="string" className="form-input"></input>
+            </div>
+          </div>
+
           <div className="form-group">
             <label htmlFor="email" className="form-label">
               Email Address
