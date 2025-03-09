@@ -49,7 +49,7 @@ body {
 }
 .welcome_text {
   position: fixed;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 45px;
@@ -84,7 +84,6 @@ body {
   }
   .welcome_text {
     font-size: 36px;
-    top: 40%;
   }
   .pet_image {
     width: 220px;
@@ -108,7 +107,6 @@ body {
 
   .welcome_text {
     font-size: 28px;
-    top: 30%;
   }
   .pet_image {
     width: 170px;
