@@ -34,11 +34,8 @@ export async function POST(request) {
     const url = request.nextUrl.clone();
     url.pathname = "/pages/dashboard";
     return NextResponse.redirect(url);
-  } catch (error) {
+  } catch {
     //if the login information doesnt match the records send an error
-    return NextResponse.json(
-      { error: "Something went wrong" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Login Failed" }, { status: 500 });
   }
 }

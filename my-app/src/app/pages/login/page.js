@@ -11,7 +11,12 @@ export default function LoginPage() {
             <label htmlFor="email" className="form-label">
               Email Address
             </label>
-            <input name="email" type="email" className="form-input"></input>
+            <input
+              name="email"
+              type="email"
+              className="form-input"
+              required
+            ></input>
           </div>
 
           <div className="form-group">
@@ -22,6 +27,7 @@ export default function LoginPage() {
               name="password"
               type="password"
               className="form-input"
+              required
             ></input>
           </div>
 

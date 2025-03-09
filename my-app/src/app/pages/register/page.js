@@ -16,7 +16,12 @@ export default function RegistrationPage() {
               <label htmlFor="fname" className="form-label">
                 First Name
               </label>
-              <input name="fname" type="string" className="form-input"></input>
+              <input
+                name="fname"
+                type="string"
+                className="form-input"
+                required
+              ></input>
             </div>
 
             <div className="form-group">
@@ -31,7 +36,12 @@ export default function RegistrationPage() {
             <label htmlFor="email" className="form-label">
               Email Address
             </label>
-            <input name="email" type="email" className="form-input"></input>
+            <input
+              name="email"
+              type="email"
+              className="form-input"
+              required
+            ></input>
           </div>
 
           <div className="form-group">
@@ -42,6 +52,8 @@ export default function RegistrationPage() {
               name="password"
               type="password"
               className="form-input"
+              required
+              minLength={8}
             ></input>
           </div>
 
