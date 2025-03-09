@@ -29,22 +29,6 @@ export default function RegistrationPage() {
             ></input>
           </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="fname" className="form-label">
-                First Name
-              </label>
-              <input name="fname" type="text" className="form-input"></input>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="lname" className="form-label">
-                Last Name
-              </label>
-              <input name="lname" type="text" className="form-input"></input>
-            </div>
-          </div>
-
           <button type="submit" className="signup-btn">
             Create Account
           </button>
