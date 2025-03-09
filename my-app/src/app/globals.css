@@ -54,4 +54,65 @@ body {
   transform: translate(-50%, -50%);
   font-size: 45px;
   color: #555;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  z-index: 2;
+}
+.header_buttons {
+  position: absolute;
+  top: 60px;
+  right: 120px;
+  display: flex;
+  gap: 20px;
+}
+
+.pet_image {
+  position: fixed;
+  bottom: 80px;
+  left: 180px;
+  width: 270px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .header_buttons {
+    top: 40px;
+    right: 40px;
+  }
+  .welcome_text {
+    font-size: 36px;
+    top: 40%;
+  }
+  .pet_image {
+    width: 220px;
+    bottom: 50px;
+    left: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_buttons {
+    top: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .login_btn,
+  .signup_btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .welcome_text {
+    font-size: 28px;
+    top: 30%;
+  }
+  .pet_image {
+    width: 170px;
+    bottom: 30px;
+    left: 20px;
+  }
 }
