@@ -65,7 +65,13 @@ Directus/sdk registerUser function - https://docs.directus.io/packages/@directus
 Directus User Object - https://docs.directus.io/reference/system/users.html
 Next.js nextResponse function - https://nextjs.org/docs/app/api-reference/functions/next-response#json
 
+Stylings are intentionally kept minimal during this phase of the project to reduce the information on the page, and allow a smooth, intuitive user flow.
+
+The user posts on their dashboard are not yet filled and will be updated further in future phases of this project.
+
 ## Challenges
+
+-when a user inputs incorrect login information we use nextResponse to redirect the user to a json error page. We will need to look into alternatives in the future as currently this negatively impacts the user experience.
 
 -A large amount of time was wasted setting up strapi for user authorization. The documentation for strapi was incredibly difficult to follow and did not seem to contain the information needed so i scrapped everything i had worked on and began again from the ground up using directus.
 
@@ -78,6 +84,8 @@ Next.js nextResponse function - https://nextjs.org/docs/app/api-reference/functi
 -Group members who forked the repo were having issues with directus. This was an issue of working on older commits and was resolved by re-fetching the origin.
 
 -CSS stylings required multiple pull requests to fix an issue with responsiveness.
+
+-gitignore was causing issues on a group-members pull requests for an unknown reason. Their code only affected dashboard.css page.js so the code was entered manually
 
 ## Group Communication (used to explain repository before handing it off to group-members, contains further insights to development process, but there have been multiple updates since it was created)
 
