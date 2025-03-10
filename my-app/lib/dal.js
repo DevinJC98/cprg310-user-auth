@@ -10,9 +10,9 @@ import { redirect } from "next/navigation";
 export async function getUserData() {
   //try to verify if the user is logged in
   try {
-    //checks if the user is logged in by matching cookies to directus session tokens
+    //matches the cookies set in login/route.js to the user tokens stored in directus
     const token = (await cookies()).get("directus_session_token")?.value;
-    //if there are no cookies, redirect to login
+    //if there is no access token, no user is currently logged in, redirect to login
     if (!token) {
       redirect("/pages/login");
     }

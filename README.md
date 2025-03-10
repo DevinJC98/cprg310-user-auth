@@ -1,8 +1,69 @@
 # cprg310-user-auth
 
-## Notes for Tha Group
+## Project Purpose
 
--alright gang, this took me far longer than i thought it would and it's almost 4am so i'll type this out while i'm still lucid.
+This project was created for cprg-310-a Project: Phase 1 - User Authentification
+
+Project Type:
+Travel Blog
+
+Front-End:
+Next.js
+
+Back-End:
+Directus
+
+Dependancies:
+@directus/sdk: 19.0.1
+next: 15.2.1
+react: 19.0.0
+react-dom: 19.0.0
+
+## Testing Commands
+
+There are two steps to begin testing this app
+
+To start the next portion of the app, enter the teminal cd into the my-app folder of this repository, then run the command "npm run dev"
+
+To start the directus server you will be required to have docker installed and have the program running in the background. once docker is running, cs into the directus folder in this repository, and run the command "docker compose up"
+
+To enter directus to view the user roles, permissions, and cms content, the login information is as follows.
+
+Email:
+admin@example.com
+Password:
+admin-password-1
+
+## Install Process
+
+Create Github Repository
+
+Download and install docker inside repository
+@ https://docs.docker.com/get-docker/
+-this is required to install and run directus
+-run command "docker run -p 8055:8055 directus/directus" in terminal to create docker project
+
+Create Next App
+Run Command "npx create-next-app@latest" in repository folder to create next app
+Run Command "npm install @directus/sdk to install dependancies
+
+## App Creation
+
+This app was created using next.js with directus as a headless cms. The user authentication was implemented primarily using the following documentation.
+
+Primary Tutorial -https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js
+
+- this tutorial uses typescript so a few piece of code needed to be removed to use javascript instead.
+
+Throughout the process multiple bugs appeared that required learning more about the information shown in the primary tutorial. Some additional documentation used is listed below.
+
+Directus/sdk registerUser function - https://docs.directus.io/packages/@directus/sdk/rest/functions/registerUser.html
+Directus User Object - https://docs.directus.io/reference/system/users.html
+Next.js nextResponse function - https://nextjs.org/docs/app/api-reference/functions/next-response#json
+
+## Group Communication (used to explain repository before handing it off to group-members, contains further insteads to development process, but there have been multiple updates since it was created)
+
+alright gang, this took me far longer than i thought it would and it's almost 4am so i'll type this out while i'm still lucid.
 
 this repo is made up of two parts, the directus folder, and the my-app folder.
 
@@ -50,32 +111,9 @@ if you read through all of my nonsense and want to get started on this baby. You
 
 for the dashboard theres a link to the primary tutorial i used at the bottom of the read me. somewhere deep in the bowels of the tutorial theres an example you can use for passing component properties as well as instructions to build said components near the top.
 
-If you change any of the code outside of the css files let me know so theres no contradicting files when we merge.. i'm sure merging all the forks will suck tremendously either way but we'll cross that bridge when we get to it.
+If you change any of the code outside of the css files let me know so theres no contradicting files when we merge. I'm sure merging all the forks will suck tremendously either way but we'll cross that bridge when we get to it.
 
 otherwise
 
 My brain hurts
 -D
-
-## Testing Commands
-
-fill this in later
-
-## Install Process
-
-Create Github Repository
-
-Download and install docker inside repository
-@ https://docs.docker.com/get-docker/
--this is required to install and run directus
--run command "docker run -p 8055:8055 directus/directus" in terminal to create docker project
-
-Create Next App
-Run Command "npx create-next-app@latest" in repository folder to create next app
-Run Command "npm install @directus/sdk to install dependancies
-
-## App Creation
-
-Primary Tutorial -https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js
-
-Helpful documentation - https://docs.directus.io/packages/@directus/sdk/rest/functions/registerUser.html
