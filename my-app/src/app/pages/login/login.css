@@ -116,6 +116,11 @@
   margin-bottom: 16px;
   text-align: center;
 }
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
 
 @media (max-width: 768px) {
   .login-container {
