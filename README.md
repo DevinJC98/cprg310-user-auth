@@ -65,6 +65,15 @@ Directus/sdk registerUser function - https://docs.directus.io/packages/@directus
 Directus User Object - https://docs.directus.io/reference/system/users.html
 Next.js nextResponse function - https://nextjs.org/docs/app/api-reference/functions/next-response#json
 
+## Challenges
+
+-A large amount of time was wasted setting up strapi for user authorization. The documentation for strapi was incredibly difficult to follow and did not seem to contain the information needed so i scrapped everything i had worked on and began again from the ground up using directus.
+-A few of the commits i made were solely for buggfixing that turned out to be one or two small syntax errors with capitalization.
+-The Primary tutorial did not contain information on how to populate the dashboard page with user information. I went to the registerUser function documentation to resolve the issue.
+-The previously mentioned documentation was also used to integrate first names and last names into the user registration form.
+-Group members who forked the repo were having issues with directus. This was an issue of working on older commits and was resolved by re-fetching the origin.
+-CSS stylings required multiple pull requests to fix an issue with responsiveness.
+
 ## Group Communication (used to explain repository before handing it off to group-members, contains further insteads to development process, but there have been multiple updates since it was created)
 
 alright gang, this took me far longer than i thought it would and it's almost 4am so i'll type this out while i'm still lucid.
