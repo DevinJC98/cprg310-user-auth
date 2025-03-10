@@ -36,6 +36,12 @@ export async function POST(request) {
     return NextResponse.redirect(url);
   } catch {
     //if the login information doesnt match the records send an error
-    return NextResponse.json({ error: "Login Failed" }, { status: 500 });
+    return NextResponse.json(
+      {
+        error:
+          "Sorry, login failed, either your account does not exist or your credentials are incorrect.",
+      },
+      { status: 500 }
+    );
   }
 }

@@ -1,12 +1,32 @@
+"use client";
 import Link from "next/link";
 import "./login.css";
+import { useState } from "react";
 
 export default function LoginPage() {
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const response = await fetch("/api/auth/login", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const data = await response.json();
+      setErrorMessage(data.error);
+    } else {
+      window.location.href = "/pages/dashboard";
+    }
+  }
+
   return (
     <div className="login-container">
       <div className="login-section">
         <h1 className="login-title">Log In</h1>
-        <form action="/api/auth/login" method="POST" className="login-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group">
             <label htmlFor="email" className="form-label">
               Email Address
@@ -30,7 +50,7 @@ export default function LoginPage() {
               required
             ></input>
           </div>
-
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <button type="submit" className="login-btn">
             Log In
           </button>
