@@ -12,7 +12,6 @@ export default function Home() {
         </Link>
       </div>
       <p className="welcome_text">Welcome to our blog world! </p>
-      <img src="/pet.jpg" alt="pet" className="pet_image" />
     </>
   );
 }
