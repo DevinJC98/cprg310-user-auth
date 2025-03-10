@@ -25,7 +25,11 @@ There are two steps to begin testing this app
 
 To start the next portion of the app, enter the teminal cd into the my-app folder of this repository, then run the command "npm run dev"
 
+By default the url for the app will be "http://localhost:3000"
+
 To start the directus server you will be required to have docker installed and have the program running in the background. once docker is running, cs into the directus folder in this repository, and run the command "docker compose up"
+
+By default Directus should be running on "http://localhost:8055"
 
 To enter directus to view the user roles, permissions, and cms content, the login information is as follows.
 
