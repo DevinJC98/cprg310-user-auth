@@ -79,7 +79,7 @@ Next.js nextResponse function - https://nextjs.org/docs/app/api-reference/functi
 
 -CSS stylings required multiple pull requests to fix an issue with responsiveness.
 
-## Group Communication (used to explain repository before handing it off to group-members, contains further insteads to development process, but there have been multiple updates since it was created)
+## Group Communication (used to explain repository before handing it off to group-members, contains further insights to development process, but there have been multiple updates since it was created)
 
 alright gang, this took me far longer than i thought it would and it's almost 4am so i'll type this out while i'm still lucid.
 
