@@ -5,7 +5,7 @@
 
 .login-container {
   width: 90%;
-  max-width: 840px;
+  max-width: 810px;
   min-height: 470px;
   position: absolute;
   top: 50%;
@@ -147,7 +147,7 @@
     width: 90%;
     margin: 0 auto;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
   }

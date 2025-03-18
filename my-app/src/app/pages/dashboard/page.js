@@ -13,12 +13,6 @@ export default async function Dashboard() {
     <main>
       <header>
         <h1>Hello {userdata.first_name + " " + userdata.last_name}</h1>
-        <form action="/api/auth/logout" method="POST">
-          <button type="submit" className="logout-btn">
-            {" "}
-            Log Out{" "}
-          </button>
-        </form>
       </header>
 
       <section>
