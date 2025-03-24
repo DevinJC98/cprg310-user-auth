@@ -108,6 +108,5 @@ window.addEventListener("resize", function () {
     navlinks.style.display = "grid";
   } else if (hamburgerbutton.innerHTML == "=") {
     navlinks.style.display = "none";
-    console.log("Yeet");
   }
 });

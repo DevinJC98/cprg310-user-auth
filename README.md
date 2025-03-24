@@ -51,6 +51,14 @@ Create Next App
 Run Command "npx create-next-app@latest" in repository folder to create next app
 Run Command "npm install @directus/sdk to install dependancies
 
+## Responsive Navigation and Routing Additions
+
+-For Phase 2 of this assignment we added multiple pages as well as a navbar react component, expanding on the information we already created in the previous phase of this assignment.
+For the routing between pages, we used the Link react component as this is the main way next.js handles routing as far as I am aware.
+-The Hamburgermenu uses a button with a functino attached to toggle classes on the the navbar aswell as change the display on the navigation links
+-There is an eventlistener added to the window at the bottom of the Navbar.jsx file. This exists to fix a small issue where the screen size is changed when the hamburger menu is opened. This is giving me an error saying that the window is undefined, and has lead me to look deeper into useStates but I am unsure oof how to properly fix the error. It is an edge case and although it gives me an error message through next, the function still seems to work so I am not overy concerned with this.
+-Otherwise this part of the assignment was primarily made using vanilla css and media queries to add responsiveness to the navbar.
+
 ## App Creation
 
 This app was created using next.js with directus as a headless cms. The user authentication was implemented primarily using the following documentation.

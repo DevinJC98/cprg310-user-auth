@@ -97,6 +97,8 @@
   margin-top: 8px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
+  text-align: center;
+  text-decoration: none;
 }
 
 .logout_btn:hover {
@@ -114,6 +116,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
 }
 
 .signup_btn {
@@ -126,6 +130,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
 }
 
 .login_btn:hover {
