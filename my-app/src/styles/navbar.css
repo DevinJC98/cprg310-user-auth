@@ -192,6 +192,7 @@
     font-size: 0.6rem;
   }
 }
+
 @media (max-width: 480px) {
   .logo a {
     margin-bottom: 5%;
