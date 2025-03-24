@@ -15,6 +15,18 @@ const getCookie = (name) => {
   return null;
 };
 
+//Hamburger Menu Functionality
+const hamburger = () => {
+  if (hamburgerbutton.innerHTML == "=") {
+    navlinks.style.display = "grid";
+    hamburgerbutton.innerHTML = "X";
+  } else {
+    navlinks.style.display = "none";
+    hamburgerbutton.innerHTML = "=";
+  }
+  hamburgerbutton.classList.toggle("hamburgerclosed");
+};
+
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -33,35 +45,6 @@ export default function Navbar() {
       "directus_session_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
     setIsLoggedIn(false);
   };
-
-  //Hamburger Menu Functionality
-  const hamburger = () => {
-    if (hamburgerbutton.innerHTML == "=") {
-      navlinks.style.display = "grid";
-      hamburgerbutton.innerHTML = "X";
-      hamburgerbutton.style.backgroundColor = "initial";
-      hamburgerbutton.style.border = "2px solid var(--teal)";
-      hamburgerbutton.style.color = "black";
-      burgerisopen = true;
-    } else {
-      navlinks.style.display = "none";
-      hamburgerbutton.innerHTML = "=";
-      hamburgerbutton.style.backgroundColor = "#008799ea";
-      hamburgerbutton.style.border = "none";
-      hamburgerbutton.style.color = "white";
-      burgerisopen = false;
-    }
-  };
-
-  let burgerisopen = false;
-
-  window.addEventListener("resize", function () {
-    if (screen.width > 1024) {
-      navlinks.style.display = "grid";
-    } else {
-      hamburger();
-    }
-  });
 
   return (
     <nav className="navbar">
@@ -94,18 +77,20 @@ export default function Navbar() {
 
       <div className="header_buttons">
         {isLoggedIn ? (
-          <Link href="/pages/dashboard">
-            <button onClick={handleLogout} className="logout_btn">
-              Log Out
-            </button>
+          <Link
+            href="/pages/dashboard"
+            onClick={handleLogout}
+            className="logout_btn"
+          >
+            Log Out
           </Link>
         ) : (
           <>
-            <Link href="/pages/login">
-              <button className="login_btn">Log In</button>
+            <Link href="/pages/login" className="login_btn">
+              Log In
             </Link>
-            <Link href="/pages/register">
-              <button className="signup_btn">Sign Up</button>
+            <Link href="/pages/register" className="signup_btn">
+              Sign Up
             </Link>
           </>
         )}
@@ -116,3 +101,13 @@ export default function Navbar() {
     </nav>
   );
 }
+
+//if the screen is resized above the point where the navigation bar is hidden, this function is called to ensure the links are visible.
+window.addEventListener("resize", function () {
+  if (screen.width > 1025) {
+    navlinks.style.display = "grid";
+  } else if (hamburgerbutton.innerHTML == "=") {
+    navlinks.style.display = "none";
+    console.log("Yeet");
+  }
+});

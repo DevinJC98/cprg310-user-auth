@@ -65,8 +65,8 @@ export default function RegistrationPage() {
 
       <div className="login-section">
         <p className="login-text">Already have an account?</p>
-        <Link href="/pages/login">
-          <button className="login-btn">Log In</button>
+        <Link href="/pages/login" className="login-btn">
+          Log In
         </Link>
       </div>
     </div>

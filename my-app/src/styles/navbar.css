@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/*Navbar and logo*/
+/*Navbar*/
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -10,14 +10,6 @@
   background: #9ba88d;
   padding: 10px 20px;
   width: 100%;
-  border: 0px solid black;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #852e19;
-  text-decoration: none;
 }
 
 /*Navbar Links*/
@@ -28,8 +20,6 @@
   justify-content: space-between;
   padding: 0;
   gap: 20px;
-  border: 0px solid black;
-
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -39,7 +29,7 @@
   text-align: center;
   text-decoration: none;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
   padding: 6px 15px;
   border-radius: 20px;
   transition: all 0.3s ease;
@@ -88,6 +78,11 @@
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
   border: none;
   font-size: 2rem;
+}
+.hamburgerclosed {
+  color: black;
+  background-color: none;
+  border: 2px solid var(--teal);
 }
 
 .logout_btn {

@@ -23,7 +23,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="login-container">
+    <section className="login-container">
       <div className="login-section">
         <h1 className="login-title">Log In</h1>
         <form onSubmit={handleSubmit} className="login-form">
@@ -59,10 +59,10 @@ export default function LoginPage() {
 
       <div className="register-section">
         <p className="register-text">Don't have an account?</p>
-        <Link href="/pages/register">
-          <button className="signup-btn">Register</button>
+        <Link href="/pages/register" className="signup-btn">
+          Register
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
