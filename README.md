@@ -2,7 +2,7 @@
 
 ## Project Purpose
 
-This project was created for cprg-310-a Project: Phase 1 - User Authentification
+This project was created for cprg-310-a Project: Phase 1 - User Authentification & Phase 2 - Responsive Navigation and Routing
 
 Project Type:
 Travel Blog
@@ -38,26 +38,27 @@ admin@example.com
 Password:
 admin-password-1
 
+## Responsive Navigation and Routing Additions (Phase 2)
+
+- For Phase 2 of this assignment we added multiple pages as well as a navbar react component, expanding on the information we already created in the previous phase of this assignment, as well as using vanilla css with media queries to implement a responsive design.
+- For the routing between pages, we used the Link react component as this is the main way next.js handles routing as far as I am aware.
+- A hamburger menu has been implemented to add additional responsiveness on the navbar component for smaller screen sizes.
+- (fixed)There is an eventlistener added to the window at the bottom of the Navbar.jsx file. This exists to fix a small issue where the screen size is changed when the hamburger menu is opened. This is giving me an error saying that the window is undefined, and has lead me to look deeper into useStates but I am unsure of how to properly fix the error. I believe is an edge-case as it shouldnt be often that screen size changes as dramatically as is required and although it gives me an error message through next, the function still seems to work so I am not overly concerned with this.
+- The previous issue was fixed by david using the useRef react hook.
+
 ## Install Process
 
 Create Github Repository
 
 Download and install docker inside repository
 @ https://docs.docker.com/get-docker/
--this is required to install and run directus
--run command "docker run -p 8055:8055 directus/directus" in terminal to create docker project
+
+- this is required to install and run directus
+- run command "docker run -p 8055:8055 directus/directus" in terminal to create docker project
 
 Create Next App
 Run Command "npx create-next-app@latest" in repository folder to create next app
 Run Command "npm install @directus/sdk to install dependancies
-
-## Responsive Navigation and Routing Additions
-
--For Phase 2 of this assignment we added multiple pages as well as a navbar react component, expanding on the information we already created in the previous phase of this assignment.
-For the routing between pages, we used the Link react component as this is the main way next.js handles routing as far as I am aware.
--The Hamburgermenu uses a button with a functino attached to toggle classes on the the navbar aswell as change the display on the navigation links
--There is an eventlistener added to the window at the bottom of the Navbar.jsx file. This exists to fix a small issue where the screen size is changed when the hamburger menu is opened. This is giving me an error saying that the window is undefined, and has lead me to look deeper into useStates but I am unsure oof how to properly fix the error. It is an edge case and although it gives me an error message through next, the function still seems to work so I am not overy concerned with this.
--Otherwise this part of the assignment was primarily made using vanilla css and media queries to add responsiveness to the navbar.
 
 ## App Creation
 
@@ -79,21 +80,21 @@ The user posts on their dashboard are not yet filled and will be updated further
 
 ## Challenges
 
--when a user inputs incorrect login information we use nextResponse to redirect the user to a json error page. We will need to look into alternatives in the future as currently this negatively impacts the user experience.
+- when a user inputs incorrect login information we use nextResponse to redirect the user to a json error page. We will need to look into alternatives in the future as currently this negatively impacts the user experience.
 
--A large amount of time was wasted setting up strapi for user authorization. The documentation for strapi was incredibly difficult to follow and did not seem to contain the information needed so i scrapped everything i had worked on and began again from the ground up using directus.
+- A large amount of time was wasted setting up strapi for user authorization. The documentation for strapi was incredibly difficult to follow and did not seem to contain the information needed so i scrapped everything i had worked on and began again from the ground up using directus.
 
--A few of the commits i made were solely for buggfixing that turned out to be one or two small syntax errors with capitalization.
+- A few of the commits i made were solely for buggfixing that turned out to be one or two small syntax errors with capitalization.
 
--The Primary tutorial did not contain information on how to populate the dashboard page with user information. I went to the registerUser function documentation to resolve the issue.
+- The Primary tutorial did not contain information on how to populate the dashboard page with user information. I went to the registerUser function documentation to resolve the issue.
 
--The previously mentioned documentation was also used to integrate first names and last names into the user registration form.
+- The previously mentioned documentation was also used to integrate first names and last names into the user registration form.
 
--Group members who forked the repo were having issues with directus. This was an issue of working on older commits and was resolved by re-fetching the origin.
+- Group members who forked the repo were having issues with directus. This was an issue of working on older commits and was resolved by re-fetching the origin.
 
--CSS stylings required multiple pull requests to fix an issue with responsiveness.
+- CSS stylings required multiple pull requests to fix an issue with responsiveness.
 
--gitignore was causing issues on a group-members pull requests for an unknown reason. Their code only affected dashboard.css page.js so the code was entered manually
+- gitignore was causing issues on a group-members pull requests for an unknown reason. Their code only affected dashboard.css page.js so the code was entered manually
 
 ## Group Communication (used to explain repository before handing it off to group-members, contains further insights to development process, but there have been multiple updates since it was created)
 

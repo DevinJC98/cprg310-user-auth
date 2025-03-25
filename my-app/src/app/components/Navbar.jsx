@@ -15,6 +15,14 @@ const getCookie = (name) => {
   return null;
 };
 
+// logout function
+const handleLogout = () => {
+  // clear session token in cookies
+  document.cookie =
+    "directus_session_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+  setIsLoggedIn(false);
+};
+
 export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navlinksRef = useRef(null);
@@ -26,20 +34,21 @@ export default function Navbar() {
     if (token) {
       setIsLoggedIn(true);
     }
-    
+
     // Handle responsive navigation
     const handleResize = () => {
-      
       if (navlinksRef.current && window.innerWidth > 1025) {
         navlinksRef.current.style.display = "grid";
-      } else if (hamburgerbuttonRef.current && hamburgerbuttonRef.current.innerHTML === "=") {
+      } else if (
+        hamburgerbuttonRef.current &&
+        hamburgerbuttonRef.current.innerHTML === "="
+      ) {
         if (navlinksRef.current) navlinksRef.current.style.display = "none";
       }
     };
 
     // Add event listener
     window.addEventListener("resize", handleResize);
-    
 
     // Cleanup event listener
     return () => {
