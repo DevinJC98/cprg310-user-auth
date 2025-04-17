@@ -17,11 +17,12 @@ body {
   font-family: var(--main-font);
 }
 
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .welcome_text {
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 45px;
   color: #555;
   text-align: center;
@@ -29,7 +30,45 @@ body {
   max-width: 800px;
   z-index: 2;
 }
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 3rem;
+}
+.mapweather {
+  position: fixed;
+  bottom: 1rem;
+  left: 5rem;
+  max-width: 1200px;
+  width: 90%; /* 可选，防止太宽 */
+  border-radius: 10px;
+  padding: 20px;
+}
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
+.search-description {
+  font-size: 18px;
+  color: #333;
+  max-width: 600px;
+}
+.infor {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  min-height: 400px;
+}
+.map {
+  width: 65%;
+}
+.weather {
+  width: 35%;
+  padding-bottom: 1rem;
+}
 .pet_image {
   position: fixed;
   bottom: 80px;
@@ -60,4 +99,26 @@ body {
     bottom: 30px;
     left: 20px;
   }
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #007bff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+}
+
+.preview {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
 }
