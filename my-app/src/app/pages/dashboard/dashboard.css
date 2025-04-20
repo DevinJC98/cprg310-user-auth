@@ -17,6 +17,41 @@ section {
   padding-top: 0.5rem;
   margin: 1rem;
 }
+/*Dashboard form*/
+main {
+  display: flex;
+  width: 100%;
+  border: 2px solid black;
+}
+#stuff {
+  width: 30%;
+}
+
+#blogposts {
+  width: 70%;
+  border: 1px solid black;
+  padding: 5%;
+}
+#blogposts div {
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+#postform {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+#postheader {
+  width: 50%;
+}
+#postparagraph {
+  height: 200px;
+  margin-bottom: 2ch;
+}
+#postsubmit {
+  width: 15%;
+}
 
 @media (max-width: 420px) {
   header {

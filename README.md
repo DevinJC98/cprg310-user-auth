@@ -18,6 +18,8 @@ Dependancies:
 next: 15.2.1
 react: 19.0.0
 react-dom: 19.0.0
+react-leaflet
+d3
 
 ## Testing Commands
 
