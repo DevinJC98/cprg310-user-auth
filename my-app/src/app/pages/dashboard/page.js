@@ -18,7 +18,6 @@ export default async function Dashboard() {
           <ProfileEditForm userData={userdata} />
         </div>
       </header>
-
       <section>
         <h2>{userdata.first_name}'s Posts</h2>
       </section>
