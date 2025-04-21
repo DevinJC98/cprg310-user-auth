@@ -42,8 +42,9 @@ export default function Content() {
       <>
         {currentUserPosts?.map((post, index) => (
           <article key={index}>
-            <h3>{post.Title}</h3>
+            <h3 id="title">{post.Title}</h3>
             <p>{post.Body}</p>
+            <p id="date">{post.date}</p>
           </article>
         ))}
       </>

@@ -13,7 +13,7 @@ export async function POST(request) {
   //fetch the data submitted in the create post form
   const formData = await request.formData();
   const titletext = formData.get("posttitle");
-  const bodytext = formData.get("postcontent");
+  const bodytext = formData.get("postparagraph");
 
   //required fields
   if (!titletext || !bodytext) {

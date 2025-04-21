@@ -51,6 +51,7 @@
 
 .toggle-btn:hover {
   background-color: var(--teal);
+  color: white;
 }
 
 form {

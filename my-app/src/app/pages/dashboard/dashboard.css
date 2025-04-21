@@ -53,14 +53,19 @@ main {
 article {
   width: 100%;
   margin: 1%;
-  padding: 4%;
+  padding: 1% 4% 1% 4%;
   border: 3px solid var(--teal);
   border-radius: 25px;
 
   box-shadow: 0 0 2px black;
 }
-article h3 {
+#title {
+  line-height: 0.2;
   font-size: 1.5rem;
+  color: #555;
+}
+#date {
+  font-size: 1rem;
   color: #555;
 }
 article p {
@@ -80,6 +85,19 @@ article p {
 }
 #postsubmit {
   width: 10ch;
+  padding: 4px;
+  margin: 0 4px;
+  background-color: rgb(206, 206, 196);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#postsubmit:hover {
+  background-color: var(--teal);
+  color: white;
 }
 
 h3 {
