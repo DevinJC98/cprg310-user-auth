@@ -16,45 +16,103 @@ body {
   padding: 0;
   font-family: var(--main-font);
 }
+.welcome-part {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10rem;
+}
 
 .title {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  font-style: italic;
+  color: var(--teal);
 }
 
 .welcome_text {
+  margin-top: 6rem;
   font-size: 45px;
-  color: #555;
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
-  z-index: 2;
+}
+
+.poem {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-left: 4px solid var(--teal);
+  background: #f3f9f1;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.poem-line {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideIn 0.8s forwards;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .theme {
+  position: absolute;
+  right: 1rem;
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-right: 3rem;
 }
 .mapweather {
-  position: fixed;
-  bottom: 1rem;
-  left: 5rem;
-  max-width: 1200px;
-  width: 90%; /* 可选，防止太宽 */
-  border-radius: 10px;
+  max-width: 500px;
+  max-height: 520px;
+  width: 90%;
   padding: 20px;
+  background-color: #f3f9f1;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 .search-section {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.shared-form {
+  display: flex;
+}
+.city-input {
+  padding: 0.2rem 1rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.city-input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+.submit-button {
+  background-color: rgb(206, 206, 196);
+  color: black;
+  font-size: 16px;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .search-description {
-  font-size: 18px;
-  color: #333;
-  max-width: 600px;
+  font-size: 16px;
+  color: var(--teal);
+  margin-top: 0.5rem;
 }
 .infor {
   display: flex;
@@ -63,12 +121,9 @@ body {
   min-height: 400px;
 }
 .map {
-  width: 65%;
+  width: 100%;
 }
-.weather {
-  width: 35%;
-  padding-bottom: 1rem;
-}
+
 .pet_image {
   position: fixed;
   bottom: 80px;
@@ -79,6 +134,16 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 1050px) {
+  .welcome-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .welcome_text {
     font-size: 36px;
@@ -87,6 +152,13 @@ body {
     width: 220px;
     bottom: 50px;
     left: 110px;
+  }
+  .welcome-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }
 

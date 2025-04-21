@@ -33,6 +33,8 @@ export default function Navbar() {
     const token = getCookie("directus_session_token");
     if (token) {
       setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
     }
 
     // Handle responsive navigation
