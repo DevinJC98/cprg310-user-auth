@@ -24,12 +24,12 @@ export default function PostList() {
         <label htmlFor="posttitle">Title</label>
         <input type="text" name="posttitle" id="posttitle" required></input>
         <label htmlFor="postcontent">Content</label>
-        <input
+        <textarea
           type="text"
           name="postcontent"
           id="postparagraph"
           required
-        ></input>
+        ></textarea>
         <input type="submit" id="postsubmit"></input>
       </form>
     </>

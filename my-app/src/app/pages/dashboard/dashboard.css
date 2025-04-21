@@ -1,4 +1,6 @@
-h1 {
+h1,
+h2,
+h3 label {
   color: #555;
 }
 
@@ -21,26 +23,29 @@ section {
 main {
   display: flex;
   width: 100%;
-  border: 2px solid black;
 }
-#stuff {
+#userWidgets {
   width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 
 #blogposts {
   width: 70%;
-  border: 1px solid black;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
 }
 #blogposts div {
-  margin: 0 auto;
-  border: 1px solid black;
-  padding: 10px;
+  width: 100%;
+  margin-bottom: 2%;
+  padding: 2%;
+  border: 3px solid var(--teal);
+  border-radius: 25px;
 }
 #postform {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 }
 #posttitle {
   width: 50%;
@@ -50,7 +55,21 @@ main {
   margin-bottom: 2ch;
 }
 #postsubmit {
-  width: 15%;
+  width: 10ch;
+}
+
+h3 {
+  line-height: 0;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profile h1 {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 420px) {

@@ -18,24 +18,22 @@ export default async function Dashboard() {
 
   return (
     <>
-      <div id="stuff">
-        <section>
+      <section id="userWidgets">
+        <section id="profile">
           <h1>Hello {userdata.first_name}</h1>
-          <div>
-            <ProfileEditForm userData={userdata} />
-          </div>
+          <ProfileEditForm userData={userdata} />
         </section>
 
         <section id="postform">
           <PostList />
         </section>
-      </div>
-      <div id="blogposts">
+      </section>
+
+      <section id="blogposts">
         <h2>{userdata.first_name}'s Posts</h2>
-        <div>
-          <Content />
-        </div>
-      </div>
+
+        <Content />
+      </section>
     </>
   );
 }

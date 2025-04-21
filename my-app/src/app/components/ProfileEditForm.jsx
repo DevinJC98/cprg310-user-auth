@@ -115,8 +115,12 @@ export default function ProfileEditForm({ userData }) {
         <button
           className={`toggle-btn ${isUpdatingProfile ? "active" : ""}`}
           onClick={() => {
-            setIsUpdatingProfile(true);
-            setIsChangingPassword(false);
+            if (isUpdatingProfile) {
+              setIsUpdatingProfile(false);
+            } else {
+              setIsUpdatingProfile(true);
+              setIsChangingPassword(false);
+            }
           }}
         >
           Update Profile
@@ -124,8 +128,12 @@ export default function ProfileEditForm({ userData }) {
         <button
           className={`toggle-btn ${isChangingPassword ? "active" : ""}`}
           onClick={() => {
-            setIsChangingPassword(true);
-            setIsUpdatingProfile(false);
+            if (isChangingPassword) {
+              setIsChangingPassword(false);
+            } else {
+              setIsChangingPassword(true);
+              setIsUpdatingProfile(false);
+            }
           }}
         >
           Change Password

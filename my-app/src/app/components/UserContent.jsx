@@ -35,10 +35,10 @@ export default function Content() {
     //map out the information set in the usestates
     <>
       {currentUserPosts?.map((post, index) => (
-        <div key={index}>
-          <h2>{post.Title}</h2>
+        <article key={index}>
+          <h3>{post.Title}</h3>
           <p>{post.Body}</p>
-        </div>
+        </article>
       ))}
     </>
   );
