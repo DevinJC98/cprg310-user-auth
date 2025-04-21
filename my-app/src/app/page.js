@@ -26,9 +26,7 @@ export default function Home() {
 
   return (
     <div>
-      <div>
-        <ThemeSettings />
-      </div>
+      <div></div>
       <div className="welcome-part">
         <div className="title">
           <p className="welcome_text">Welcome to our blog world! </p>

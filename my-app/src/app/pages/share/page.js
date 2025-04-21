@@ -1,8 +1,19 @@
-export default function SharePage() {
+import client from "../../../../lib/directus";
+import { readItems } from "@directus/sdk";
+import "./shared.css";
+export default async function SharePage() {
+  const userposts = await client.request(readItems("Posts", { fields: ["*"] }));
   return (
-    <main>
-      <h1>shared blogs</h1>
-      <p>Here, you could share your travel experiences.</p>
-    </main>
+    //map out the information set in the usestates
+    <>
+      {userposts.map((post, index) => (
+        <article key={index}>
+          <h3 id="title">{post.Title}</h3>
+          <p id="date">By: {post.author}</p>
+          <p>{post.Body}</p>
+          <p id="date">{post.date}</p>
+        </article>
+      ))}
+    </>
   );
 }
