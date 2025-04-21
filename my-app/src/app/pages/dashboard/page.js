@@ -11,9 +11,11 @@ export default async function Dashboard() {
   const response = await getUserData();
   const userdata = await client.request(readMe({ fields: ["*"] }));
 
+  const userposts = await client.request(readItems("Posts", { fields: ["*"] }));
+
   //useeffect
   function log() {
-    console.log(userdata.id);
+    console.log(userposts);
   }
 
   return (

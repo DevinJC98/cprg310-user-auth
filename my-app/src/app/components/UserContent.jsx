@@ -22,24 +22,31 @@ export default function Content() {
           setUserInformation(fetchedposts.userdata);
           setCurrentUserPosts(fetchedposts.usersposts);
         } else {
-          console.error("error");
+          console.error("response not ok");
         }
       } catch (error) {
-        console.error("errory message");
+        console.error("Failed to connect to route");
       }
     };
     getUserInfo();
   }, []);
 
-  return (
-    //map out the information set in the usestates
-    <>
-      {currentUserPosts?.map((post, index) => (
-        <article key={index}>
-          <h3>{post.Title}</h3>
-          <p>{post.Body}</p>
-        </article>
-      ))}
-    </>
-  );
+  if (currentUserPosts === null) {
+    return <h2>Loading...</h2>;
+  }
+  if (currentUserPosts.length === 0) {
+    return <h2>You don't have any posts yet.</h2>;
+  } else {
+    return (
+      //map out the information set in the usestates
+      <>
+        {currentUserPosts?.map((post, index) => (
+          <article key={index}>
+            <h3>{post.Title}</h3>
+            <p>{post.Body}</p>
+          </article>
+        ))}
+      </>
+    );
+  }
 }

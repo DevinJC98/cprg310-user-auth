@@ -11,9 +11,10 @@ export async function POST(request) {
   const userposts = await client.request(readItems("Posts", { fields: ["*"] }));
 
   // Filter posts down to ones only crreated by the active user
-  const usersposts = userposts.filter(
+  const filterposts = userposts.filter(
     (post) => post.user_created === userdata.id
   );
+  const usersposts = filterposts.reverse();
 
   //returns the filtered array and user information in json format so it can be read by other files easily.
   return new Response(

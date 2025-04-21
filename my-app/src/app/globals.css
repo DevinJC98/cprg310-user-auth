@@ -16,6 +16,13 @@ body {
   padding: 0;
   font-family: var(--main-font);
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  background-color: rgb(252, 223, 184);
+}
 .welcome-part {
   display: flex;
   align-items: flex-end;
