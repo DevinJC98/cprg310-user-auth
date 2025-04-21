@@ -4,6 +4,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 1%;
+  background-color: rgb(255, 241, 223);
 }
 
 article {
@@ -12,7 +13,7 @@ article {
   padding: 1% 4% 1% 4%;
   border: 3px solid var(--teal);
   border-radius: 25px;
-
+  background-color: white;
   box-shadow: 0 0 2px black;
 }
 
