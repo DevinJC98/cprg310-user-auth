@@ -18,8 +18,7 @@ Dependancies:
 next: 15.2.1
 react: 19.0.0
 react-dom: 19.0.0
-react-leaflet
-d3
+react-leaflet: 5.0.0
 
 ## Testing Commands
 
@@ -39,6 +38,15 @@ Email:
 admin@example.com
 Password:
 admin-password-1
+
+## Creating a User Dashboard ( Phase 3)
+
+- Updates in this phase of the assignment primarily included improvements to the user dashboard, open source api additions to the landing page, and giving the user the ability to change their profile information and create posts within the dashboard.
+- The home page was updated with a poem that fades in on page load, as well as an interactive map using react-leaflet.
+- react-leaflet was installed using the command "npm install react-leaflet@next"
+- The User Dashboard now contains two forms both connected to the directus database through routes. One form allows the user to change their name or password in the database. The other creates an item in the posts collection using the forms fields, as well as information about the current user.
+- This page also maps out the information in the posts collection, filtered by the active users id, and reversing the array of filter posts to show the most recent posts at the top of the page.
+- The Shared Blogs page is filled by mapping out the entire posts collection
 
 ## Responsive Navigation and Routing Additions (Phase 2)
 
